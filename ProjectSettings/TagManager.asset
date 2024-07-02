@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Ladder
+  - LedgeLimit
+  - Character
+  - Enemy
+  - Giant
+  - Pushable
+  - raiseCol
+  - pullCol
   layers:
   - Default
   - TransparentFX
@@ -12,23 +21,23 @@ TagManager:
   - Water
   - UI
   - 
+  - Player
+  - NPC
+  - 
+  - 
+  - BeanStalk
   - 
   - 
   - 
+  - Character
+  - Climb
+  - Short Climb
+  - Vault
+  - Wall Run
+  - Ground
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Notice
   - 
   - 
   - 
