@@ -110,8 +110,8 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color0: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Color1: {r: 0, g: 0.5085495, b: 0.6509434, a: 0}
-    - _Color2: {r: 0, g: 0.37088633, b: 1, a: 0}
+    - _Color1: {r: 0, g: 0.50980395, b: 0.6509804, a: 1}
+    - _Color2: {r: 0, g: 0.37254903, b: 1, a: 0}
     - _DepthColor: {r: 0, g: 1, b: 0.9725489, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _NormalScale: {r: 2, g: 2, b: 0, a: 0}
