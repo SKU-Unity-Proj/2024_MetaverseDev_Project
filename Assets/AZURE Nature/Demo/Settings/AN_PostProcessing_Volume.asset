@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.36
   contrast:
     m_OverrideState: 1
-    m_Value: 92.6
+    m_Value: 19.1
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 23.1
 --- !u!114 &-5321819671238819432
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -46,10 +46,10 @@ MonoBehaviour:
     m_Value: {x: 0.71113634, y: 0.859583, z: 1, w: 0.01986097}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 0.93850017, y: 0.88459027, z: 1, w: 0.20315446}
+    m_Value: {x: 0.93850017, y: 0.88459027, z: 1, w: 0.037865195}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 0.98612577, y: 1, z: 0.9957746, w: 0.0075470572}
+    m_Value: {x: 0.98612577, y: 1, z: 0.9957746, w: -0.02250554}
 --- !u!114 &-4208019066842451967
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -111,7 +111,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.3
   scatter:
     m_OverrideState: 1
     m_Value: 0.6
@@ -168,9 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   color:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
   center:
     m_OverrideState: 0
