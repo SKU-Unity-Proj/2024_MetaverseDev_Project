@@ -82,8 +82,8 @@ Material:
     - _Float2: 0.1
     - _Float3: 0
     - _FoamContrast: 0.7
-    - _FoamDensity: 0.392
-    - _FoamDistance: 0.35
+    - _FoamDensity: 0.371
+    - _FoamDistance: 0.83
     - _FoamOpacity: 1
     - _Normal: 0.15
     - _Opacity: 1
@@ -105,8 +105,8 @@ Material:
     - _UDepthDistance: 0.3
     - _UDistancePower: 0.1
     - _WavesNormalIntensity: 0.35
-    - _WavesSpeed: 0.1
-    - _WavesTile: 0.15
+    - _WavesSpeed: 0.358
+    - _WavesTile: -0.03
     - __dirty: 0
     m_Colors:
     - _Color0: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
