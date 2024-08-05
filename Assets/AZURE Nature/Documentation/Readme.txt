@@ -1,12 +1,23 @@
-Before you open the demo scene, follow these steps:
+SETTING-UP THE PROJECT:
 
 Built-in RP:
-1) Set the color space to Linear (Edit > Project Settings > Player > Other Settings > Linear)
-2) Install the Post-Processing package from Package Manager
+1. Install the Post Processing package from the Package Manager
+2. Set the Color Space to Linear (Edit > Project Settings > Player > Other Settings)
 
 URP:
-1) Set the color space to Linear (Edit > Project Settings > Player > Other Settings > Linear)
-2) Import "URP (2021.3-2022.3)" or "URP (2023.1+)" package depending on your Unity version (AZURE Nature > SRP Packages)
-3) Set render pipeline asset (Edit > Project Settings > Graphics)
+1. Set the Color Space to Linear (Edit > Project Settings > Player > Other Settings)
+2. Go to the "URP Shaders" folder and unpack a URP package, depending on your editor version
+3. Set the "AN_UniversalRenderPipelineAsset" as default or keep your own (Edit > Project Setiings > Graphics > Scriptable Render Pipeline Settings)
 
-If you need to return to the standard pipeline, just import "Built-in" package from "SRP Packages" and remove render pipeline asset from the graphics tab.
+
+
+ADDITIONAL INFO:
+
+It is recommended to delete the "URP Shaders" folder before updating the asset to avoid mixing old and new shader packages.
+
+
+
+
+
+Package version - v1.1.5
+Contact Us: contact@raygeas.com
