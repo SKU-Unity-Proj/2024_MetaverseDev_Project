@@ -1,4 +1,3 @@
-
 using Fusion;
 using UnityEngine;
 
@@ -6,8 +5,8 @@ namespace _01_04_Network_Properties
 {
     public class PlayerSpawner : SimulationBehaviour, IPlayerJoined
     {
-        public GameObject playerPrefab;
-        
+        public GameObject[] playerPrefabs; // 두 가지 캐릭터 프리팹을 담을 배열
+
         /// <summary>
         /// 플레이어가 세션에 접속했을 때 호출되는 함수
         /// </summary>
@@ -17,11 +16,13 @@ namespace _01_04_Network_Properties
             // 함수를 호출한 플레이어가 로컬 플레이어일 때
             if (player == Runner.LocalPlayer)
             {
-                // 플레이어 게임오브젝트를 스폰한다
-                Runner.Spawn(playerPrefab, Vector3.zero, Quaternion.identity);
+                // 랜덤으로 하나의 캐릭터 프리팹을 선택한다
+                int randomIndex = Random.Range(0, playerPrefabs.Length);
+                GameObject selectedPrefab = playerPrefabs[randomIndex];
+
+                // 선택된 캐릭터 프리팹을 스폰한다
+                Runner.Spawn(selectedPrefab, Vector3.zero, Quaternion.identity);
             }
         }
     }
 }
-
-
