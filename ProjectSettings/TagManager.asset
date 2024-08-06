@@ -16,6 +16,7 @@ TagManager:
   - RollerCoaster
   - Ship
   - Round
+  - wall
   layers:
   - Default
   - TransparentFX
