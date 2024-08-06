@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/01.Scene/YJScene.unity
+    guid: caa51851828fc594c9bcd5fb4162eb85
+  - enabled: 0
     path: Assets/01_02_Scene_and_Player/01_02_Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/01_04_Network_Properties/01_04_Scene.unity
     guid: b22c3620952ed76438cd19ecb790969c
   m_configObjects: {}
