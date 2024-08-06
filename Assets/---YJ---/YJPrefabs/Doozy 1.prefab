@@ -360,6 +360,10 @@ MonoBehaviour:
   JumpForce: 5
   GravityValue: -9.81
   __speed: 0
+  _smoothSpeed: 20
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &6771882089024904542
 Animator:
   serializedVersion: 5
@@ -726,8 +730,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 75072e097b9da064f84953300af2fb49, type: 2}
+  m_sharedMaterial: {fileID: -4476595382767054953, guid: 75072e097b9da064f84953300af2fb49,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
