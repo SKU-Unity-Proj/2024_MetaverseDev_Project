@@ -18,7 +18,7 @@ namespace _01_04_Network_Properties
             if (player == Runner.LocalPlayer)
             {
                 // 플레이어 게임오브젝트를 스폰한다
-                Runner.Spawn(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                Runner.Spawn(playerPrefab, new Vector3(44f, 5f, 173f), Quaternion.identity);
             }
         }
     }

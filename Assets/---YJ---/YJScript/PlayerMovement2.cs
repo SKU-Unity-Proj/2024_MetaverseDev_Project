@@ -12,6 +12,7 @@ namespace _01_04_Network_Properties
     {
         private Vector3 _velocity;
         private bool _jumpPressed;
+        public bool _isRunning;
 
         private CharacterController _controller;
         public Animator _animator;
@@ -20,7 +21,7 @@ namespace _01_04_Network_Properties
         public Camera Camera;
 
         public float PlayerSpeed = 2f;
-
+        public float RunSpeed = 4f;
         public float JumpForce = 5f;
         public float GravityValue = -9.81f;
 
@@ -39,6 +40,7 @@ namespace _01_04_Network_Properties
             {
                 _jumpPressed = true;
             }
+            _isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
         }
 
         /// <summary>
@@ -72,7 +74,8 @@ namespace _01_04_Network_Properties
             }
 
             Quaternion cameraRotationY = Quaternion.Euler(0, Camera.transform.rotation.eulerAngles.y, 0);
-            Vector3 move = cameraRotationY * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * Runner.DeltaTime * PlayerSpeed;
+            float currentSpeed = _isRunning ? RunSpeed : PlayerSpeed; // 달리기 상태에 따라 속도 결정
+            Vector3 move = cameraRotationY * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * Runner.DeltaTime * currentSpeed;
 
             _velocity.y += GravityValue * Runner.DeltaTime;
             if (_jumpPressed && _controller.isGrounded)
@@ -93,6 +96,7 @@ namespace _01_04_Network_Properties
             _jumpPressed = false;
         }
 
+        // 애니메이션 동기화
         public override void Render()
         {
             //var interpolator = new NetworkBehaviourBufferInterpolator(this);
@@ -100,6 +104,16 @@ namespace _01_04_Network_Properties
             //_animator.SetFloat("Speed", interpolator.Float(nameof(_speed)));
 
             _animator.SetFloat("Speed", _speed);
+            _animator.SetBool("isRunning", _isRunning);
+
+            if (_controller.isGrounded)
+            {
+                _animator.SetBool("isJump", false);
+            }
+            if (_jumpPressed && _controller.isGrounded)
+            {
+                _animator.SetBool("isJump", true);
+            }
         }
     }
 }
