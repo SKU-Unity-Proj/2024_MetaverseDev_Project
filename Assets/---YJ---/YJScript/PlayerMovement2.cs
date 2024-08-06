@@ -134,6 +134,7 @@ namespace _01_04_Network_Properties
             {
                 Camera = Camera.main;
                 Camera.GetComponent<FirstPersonCamera>().Target = transform;
+                //Camera.GetComponent<SecondCam>().Target = transform;
             }
 
             transform.position = _originalParent != null ? _originalParent.position : transform.position;
