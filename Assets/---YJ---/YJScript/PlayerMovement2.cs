@@ -22,7 +22,7 @@ namespace _01_04_Network_Properties
 
         [Networked]
         public float _speed { get; set; }
-        private float _interactDistance = 3f;
+        private float _interactDistance = 10f;
         public float _smoothSpeed = 20f;
 
         private Ride _currentRide;
@@ -36,6 +36,9 @@ namespace _01_04_Network_Properties
         private int _originalLayer;
         private bool _originalActiveState;
         private bool _isSeated = false;
+
+        // 원하는 좌표를 지정
+        private Vector3 targetPosition = new Vector3(-3, 2.3f, -15190.7188f);
 
         private void Awake()
         {
@@ -76,13 +79,27 @@ namespace _01_04_Network_Properties
                 //transform.rotation = _seatPosition.rotation;
             }
         }
-
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("wall"))
+            {
+                //this.transform.GetComponent<CharacterController>().enabled = false;
+                transform.position = targetPosition;
+            }
+        }
+        void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("wall"))
+            {
+                //this.transform.GetComponent<CharacterController>().enabled = true;
+            }
+        }
         void TryInteractWithRide()
         {
             Ray ray = new Ray(Camera.transform.position, Camera.transform.forward);
             RaycastHit hit;
 
-            Debug.DrawRay(Camera.transform.position, Camera.transform.forward * _interactDistance, Color.red, 200f);
+            Debug.DrawRay(Camera.transform.position, Camera.transform.forward * _interactDistance, Color.red, 2f);
 
             if (Physics.Raycast(ray, out hit, _interactDistance, interactLayer))
             {
