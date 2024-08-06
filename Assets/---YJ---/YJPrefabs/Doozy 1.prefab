@@ -360,10 +360,10 @@ MonoBehaviour:
   JumpForce: 5
   GravityValue: -9.81
   __speed: 0
-  _smoothSpeed: 20
+  _smoothSpeed: 50
   interactLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
 --- !u!95 &6771882089024904542
 Animator:
   serializedVersion: 5
