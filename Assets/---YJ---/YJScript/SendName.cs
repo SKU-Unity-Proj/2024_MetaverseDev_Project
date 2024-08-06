@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using Fusion;
 
-public class SendName : MonoBehaviour
+public class SendName : NetworkBehaviour
 {
     public TMP_InputField playerNameInput;
     public string playerNickName = null;
