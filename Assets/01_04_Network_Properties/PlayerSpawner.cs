@@ -6,7 +6,7 @@ namespace _01_04_Network_Properties
     public class PlayerSpawner : SimulationBehaviour, IPlayerJoined
     {
         public GameObject[] playerPrefabs; // 두 가지 캐릭터 프리팹을 담을 배열
-
+        public bool haveName = false;
         /// <summary>
         /// 플레이어가 세션에 접속했을 때 호출되는 함수
         /// </summary>

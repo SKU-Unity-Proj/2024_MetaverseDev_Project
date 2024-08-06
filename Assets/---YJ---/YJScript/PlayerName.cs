@@ -1,33 +1,34 @@
 using UnityEngine;
 using TMPro;
+using Fusion;
 
-public class PlayerName : MonoBehaviour
+public class PlayerName : NetworkBehaviour
 {
-    private TextMeshProUGUI playerName;
+    public TextMeshProUGUI nicknameText;
 
-    public SendName sendName;
+    [Networked] public string Nickname { get; private set; }
 
     void Start()
     {
         // TextMeshProUGUI 컴포넌트가 할당되지 않았다면 자동으로 찾기
-        if (playerName == null)
+        if (nicknameText == null)
         {
-            playerName = GetComponent<TextMeshProUGUI>();
-        }
-
-        // A스크립트가 할당되지 않았다면 자동으로 찾기
-        if (sendName == null)
-        {
-            sendName = FindObjectOfType<SendName>();
+            nicknameText = GetComponentInChildren<TextMeshProUGUI>();
         }
     }
 
-    void Update()
+    public void SetNickname(string nickname)
     {
-        // TextMeshPro 텍스트 값이 비어있으면 A스크립트의 값을 가져옴
-        if (string.IsNullOrEmpty(playerName.text))
+        Nickname = nickname;
+        UpdateNicknameUI();
+    }
+
+    private void UpdateNicknameUI()
+    {
+        // 닉네임을 표시하는 UI를 업데이트하는 코드 추가
+        if (nicknameText != null)
         {
-            playerName.text = sendName.playerName;
+            nicknameText.text = Nickname;
         }
     }
 }

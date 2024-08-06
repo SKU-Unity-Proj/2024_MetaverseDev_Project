@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 4853147636916345632}
   - component: {fileID: 8791589280669317629}
   - component: {fileID: 6771882089024904542}
+  - component: {fileID: 7954743300234542982}
   m_Layer: 7
   m_Name: Doozy 1
   m_TagString: Untagged
@@ -257,8 +258,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2145444312835965512}
   - {fileID: 6915289885631459298}
@@ -310,6 +311,7 @@ MonoBehaviour:
   - {fileID: 7051045560334982220}
   - {fileID: 4853147636916345632}
   - {fileID: 8791589280669317629}
+  - {fileID: 7954743300234542982}
 --- !u!114 &7051045560334982220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,8 +357,9 @@ MonoBehaviour:
   _isRunning: 0
   _animator: {fileID: 0}
   Camera: {fileID: 0}
-  PlayerSpeed: 4
-  RunSpeed: 8
+  SecondCam: {fileID: 0}
+  PlayerSpeed: 8
+  RunSpeed: 18
   JumpForce: 5
   GravityValue: -9.81
   __speed: 0
@@ -364,8 +367,6 @@ MonoBehaviour:
   interactLayer:
     serializedVersion: 2
     m_Bits: 4096
-  MouseSensitivity: 10
-  cameraOffset: {x: 0, y: 3.07, z: 0.24}
 --- !u!95 &6771882089024904542
 Animator:
   serializedVersion: 5
@@ -387,6 +388,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7954743300234542982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258327145149357883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9496ea8c9bca54d45b0f8cfeb1880a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nicknameText: {fileID: 1190106171063350259}
+  _Nickname: 
 --- !u!1 &435870317256465211
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +690,6 @@ GameObject:
   - component: {fileID: 332649723516151396}
   - component: {fileID: 1595940176290019262}
   - component: {fileID: 1190106171063350259}
-  - component: {fileID: 7709791258979341099}
   m_Layer: 7
   m_Name: Name
   m_TagString: Untagged
@@ -800,19 +814,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7709791258979341099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960641752655422869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9496ea8c9bca54d45b0f8cfeb1880a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sendName: {fileID: 0}
 --- !u!1 &1077425657487255513
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,10 +14,12 @@ namespace Fusion
     [DisallowMultipleComponent] // 이 컴포넌트가 중복해서 추가되지 않도록 합니다.
     public class RunnerEnableVisibility : Behaviour, INetworkRunnerCallbacks
     {
+        private NetworkRunner runner;
+        public GameObject nickNameCanvas;
 
         private void Awake()
         {
-            var runner = GetComponentInParent<NetworkRunner>();
+            runner = GetComponentInParent<NetworkRunner>();
             if (runner)
             {
                 // Optimistically register this as if we are running multi-peer (can't know yet)
@@ -80,12 +82,26 @@ namespace Fusion
                 foreach (var obj in scene.GetRootGameObjects())
                     runner.AddVisibilityNodes(obj);
         }
+        /*
+        public void SetPlayerNicknameAndSpawn(string nickname)
+        {
+            playerNickname = nickname;
 
+            // 로컬 플레이어일 때만
+            if (runner.LocalPlayer != PlayerRef.None)
+            {
+                // 플레이어 오브젝트에 닉네임 설정
+            }
+        }
+        */
         #region Unused
         // 사용되지 않는 콜백 메서드들
         void INetworkRunnerCallbacks.OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player) { }
         void INetworkRunnerCallbacks.OnObjectEnterAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player) { }
-        void INetworkRunnerCallbacks.OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
+        void INetworkRunnerCallbacks.OnPlayerJoined(NetworkRunner runner, PlayerRef player) 
+        {
+            nickNameCanvas.SetActive(true);
+        }
         void INetworkRunnerCallbacks.OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
         void INetworkRunnerCallbacks.OnInput(NetworkRunner runner, NetworkInput input) { }
         void INetworkRunnerCallbacks.OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }

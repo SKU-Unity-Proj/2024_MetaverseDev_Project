@@ -4085,22 +4085,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6a92e2b05ad288418947d65edfeebc3,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 29.873371
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a92e2b05ad288418947d65edfeebc3,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 29.873371
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a92e2b05ad288418947d65edfeebc3,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 29.873371
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a92e2b05ad288418947d65edfeebc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -92.085
+      value: -99
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a92e2b05ad288418947d65edfeebc3,
         type: 3}
@@ -4110,7 +4110,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6a92e2b05ad288418947d65edfeebc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.815002
+      value: 15.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a92e2b05ad288418947d65edfeebc3,
         type: 3}
@@ -28991,6 +28991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edbe7108d8a43ab838cf8b8d9453df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nickNameCanvas: {fileID: 1915658920}
 --- !u!114 &1756549355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29006,6 +29007,7 @@ MonoBehaviour:
   playerPrefabs:
   - {fileID: 258327145149357883, guid: cc9fd14298516f144982ba79aad72973, type: 3}
   - {fileID: 258327145149357883, guid: 5b86f8edbcb75ea499b5275dd86a9fad, type: 3}
+  haveName: 0
 --- !u!114 &1756549356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32558,7 +32560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1915658921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32572,7 +32574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameInput: {fileID: 1134336525}
-  playerName: 
+  playerNickName: 
 --- !u!114 &1915658922
 MonoBehaviour:
   m_ObjectHideFlags: 0
