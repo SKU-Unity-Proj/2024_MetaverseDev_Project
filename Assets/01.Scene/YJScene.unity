@@ -5844,6 +5844,7 @@ MonoBehaviour:
   MouseSensitivity: 7
   distance: 6
   height: 4.2
+  offset: {x: 0, y: 3.07, z: 0.24}
 --- !u!114 &310767317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5956,7 +5957,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -13210,12 +13211,12 @@ PrefabInstance:
     - target: {fileID: 8791748073510095638, guid: e89b9ccd58c1a48408ec4e0a330cf628,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5000001
+      value: 1.7563502
       objectReference: {fileID: 0}
     - target: {fileID: 8791748073510095638, guid: e89b9ccd58c1a48408ec4e0a330cf628,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.74405
       objectReference: {fileID: 0}
     - target: {fileID: 8791748073510095638, guid: e89b9ccd58c1a48408ec4e0a330cf628,
         type: 3}

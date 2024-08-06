@@ -13,6 +13,7 @@ namespace _01_04_Network_Properties
         public Animator _animator;
 
         public Camera Camera;
+        public Camera SecondCam; // 추가: SecondCam 참조
 
         public float PlayerSpeed = 2f;
         public float RunSpeed = 4f;
@@ -81,7 +82,7 @@ namespace _01_04_Network_Properties
             Ray ray = new Ray(Camera.transform.position, Camera.transform.forward);
             RaycastHit hit;
 
-            Debug.DrawRay(Camera.transform.position, Camera.transform.forward * _interactDistance, Color.red, 2f);
+            Debug.DrawRay(Camera.transform.position, Camera.transform.forward * _interactDistance, Color.red, 200f);
 
             if (Physics.Raycast(ray, out hit, _interactDistance, interactLayer))
             {
@@ -89,6 +90,7 @@ namespace _01_04_Network_Properties
                 Ride ride = hit.collider.GetComponent<Ride>();
                 if (ride != null)
                 {
+                    Debug.Log(IsSeated());
                     Debug.Log("Interacting with Ride: " + ride.name);
 
                     _seatPosition = ride.seatPosition;
@@ -113,6 +115,7 @@ namespace _01_04_Network_Properties
 
         void ExitRide()
         {
+            Debug.Log(IsSeated());
             _seatPosition = null;
 
             transform.position += transform.forward * 2f;
@@ -126,6 +129,10 @@ namespace _01_04_Network_Properties
             // 레이어와 활성 상태 복원
             gameObject.layer = _originalLayer;
             gameObject.SetActive(_originalActiveState);
+        }
+        public bool IsSeated()
+        {
+            return _isSeated;
         }
 
         public override void Spawned()
