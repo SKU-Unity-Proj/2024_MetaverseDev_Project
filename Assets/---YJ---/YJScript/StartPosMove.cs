@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
 
 public class StartPosMove : MonoBehaviour
 {
@@ -11,9 +9,22 @@ public class StartPosMove : MonoBehaviour
         {
             var cc = other.gameObject.GetComponent<CharacterController>();
 
-            cc.enabled = false;
-            other.transform.localPosition = new Vector3(2f, 2.3f, -15190f);
-            cc.enabled = true;
+            StartCoroutine(MoveAndEnableCharacterController(other.transform, cc, new Vector3(2f, 2.3f, -15190f)));
         }
+    }
+
+    IEnumerator MoveAndEnableCharacterController(Transform playerTransform, CharacterController cc, Vector3 targetPosition)
+    {
+        // Disable CharacterController
+        cc.enabled = false;
+
+        // Move the player to the target position
+        playerTransform.position = targetPosition;
+
+        // Wait for the end of the frame to ensure the position update is complete
+        yield return new WaitForEndOfFrame();
+
+        // Enable CharacterController
+        cc.enabled = true;
     }
 }
