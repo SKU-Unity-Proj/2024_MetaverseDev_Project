@@ -6,6 +6,8 @@ namespace _01_04_Network_Properties
     public class PlayerSpawner : SimulationBehaviour, IPlayerJoined
     {
         public GameObject[] playerPrefabs; // 두 가지 캐릭터 프리팹을 담을 배열
+        public GameObject[] npcPrefabs; // NPC 프리팹 배열
+
         public bool haveName = false;
         /// <summary>
         /// 플레이어가 세션에 접속했을 때 호출되는 함수
@@ -22,6 +24,13 @@ namespace _01_04_Network_Properties
 
                 // 선택된 캐릭터 프리팹을 스폰한다
                 Runner.Spawn(selectedPrefab, Vector3.zero, Quaternion.identity);
+
+                // 플레이어와 연관된 NPC 프리팹을 랜덤으로 선택한다
+                int npcRandomIndex = Random.Range(0, npcPrefabs.Length);
+                GameObject selectedNpcPrefab = npcPrefabs[npcRandomIndex];
+
+                //Vector3 npcSpawnPosition = Runner.Spawn(selectedPrefab, Vector3.zero, Quaternion.identity).transform.position + new Vector3(2, 0, 2); // 플레이어 근처에 스폰
+                Runner.Spawn(selectedNpcPrefab, Vector3.zero, Quaternion.identity);
             }
         }
     }
