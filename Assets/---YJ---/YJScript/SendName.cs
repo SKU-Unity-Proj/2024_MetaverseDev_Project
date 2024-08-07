@@ -6,6 +6,7 @@ public class SendName : NetworkBehaviour
 {
     public TMP_InputField playerNameInput;
     public string playerNickName = null;
+    public MultiplayerChat multiplayerChat;
 
     private void Awake()
     {
@@ -17,5 +18,7 @@ public class SendName : NetworkBehaviour
         playerNickName = playerNameInput.text;
         var playerName = FindObjectOfType<PlayerName>();
         playerName.SetNickname(playerNickName);
+
+        multiplayerChat.username = playerNickName;
     }
 }
