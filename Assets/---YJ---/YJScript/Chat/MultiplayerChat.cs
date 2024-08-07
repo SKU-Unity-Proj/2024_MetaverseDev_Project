@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Fusion;
 
-public class MultiplayerChat : MonoBehaviour
+public class MultiplayerChat : NetworkBehaviour
 {
     public TextMeshProUGUI _messages;
     public TextMeshProUGUI input;
